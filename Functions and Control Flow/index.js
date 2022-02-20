@@ -24,7 +24,10 @@ const checkBigger = (num1, num2) => {
 // Calculator
 
 const squareNumber = (num) => {
-  return `The result of squaring the number ${num} is ${Math.pow(num, 2)}.`;
+  //   console.log(
+  //     `The result of squaring the number ${num} is ${Math.pow(num, 2)}.`
+  //   );
+  return Math.pow(num, 2);
 };
 
 // console.log(squareNumber(2)) // 4
@@ -32,7 +35,9 @@ const squareNumber = (num) => {
 // console.log(squareNumber(4)) // 16
 
 const halfNumber = (num) => {
-  return `Half of ${num} is ${num / 2}.`;
+  const half = num / 2;
+  //   console.log(`Half of ${num} is ${num / 2}.`);
+  return half;
 };
 
 // console.log(halfNumber(2)); //1
@@ -47,7 +52,22 @@ const percentOf = (num1, num2) => {
 
 const areaOfCircle = (radius) => {
   const area = 3.14 * (radius * radius);
-  return `The area for a circle with radius ${radius} is ${area.toFixed(2)}.`;
+  //   console.log(
+  //     `The area for a circle with radius ${radius} is ${area.toFixed(2)}.`
+  //   );
+  return area;
 };
 
 // console.log(areaOfCircle(2));
+
+const lastFunction = (num) => {
+  const half = halfNumber(num);
+  const squareOfHalf = squareNumber(half);
+  const area = areaOfCircle(squareOfHalf);
+  const percent = percentOf(parseFloat(area), parseFloat(squareOfHalf));
+  return percent;
+};
+
+lastFunction(4);
+lastFunction(6);
+lastFunction(10);
