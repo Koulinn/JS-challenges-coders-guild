@@ -35,16 +35,19 @@ const halfNumber = (num) => {
   return `Half of ${num} is ${num / 2}.`;
 };
 
-console.log(halfNumber(2)); //1
-console.log(halfNumber(4)); // 2
-console.log(halfNumber(100)); //50
+// console.log(halfNumber(2)); //1
+// console.log(halfNumber(4)); // 2
+// console.log(halfNumber(100)); //50
 
 const percentOf = (num1, num2) => {
-  return `${num2} is ${((num2 / num1) * 100).toFixed(2)}% of ${num1}.`;
+  return `${num1} is ${((num1 / num2) * 100).toFixed(2)}% of ${num2}.`;
 };
 
-console.log(percentOf(10, 11));
+// console.log(percentOf(2, 8));
 
 const areaOfCircle = (radius) => {
-  return `${num2} is ${((num2 / num1) * 100).toFixed(2)}% of ${num1}.`;
+  const area = 3.14 * (radius * radius);
+  return `The area for a circle with radius ${radius} is ${area.toFixed(2)}.`;
 };
+
+// console.log(areaOfCircle(2));
