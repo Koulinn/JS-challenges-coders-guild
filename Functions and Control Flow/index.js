@@ -87,4 +87,9 @@ const tellFortune = (jobTitle, geo, partnerName, children) => {
   `You will be a ${jobTitle} in ${geo}, and married to ${partnerName} with ${children} kids.`;
 };
 
-const pluralise = () => {};
+const pluralise = (num, noun) => {
+  return `${num}, ${noun}s`;
+};
+
+console.log(pluralise(3, "cat"));
+console.log(pluralise(6, "dog"));
