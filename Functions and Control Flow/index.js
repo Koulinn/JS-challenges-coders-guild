@@ -81,4 +81,10 @@ const fixStart = (string) => {
   return modifiedString.join("");
 };
 
-console.log(fixStart("amhsddddaaaahd"));
+// console.log(fixStart("amhsddddaaaahd"));
+
+const tellFortune = (jobTitle, geo, partnerName, children) => {
+  `You will be a ${jobTitle} in ${geo}, and married to ${partnerName} with ${children} kids.`;
+};
+
+const pluralise = () => {};
