@@ -68,6 +68,17 @@ const lastFunction = (num) => {
   return percent;
 };
 
-lastFunction(4);
-lastFunction(6);
-lastFunction(10);
+// lastFunction(4);
+// lastFunction(6);
+// lastFunction(10);
+
+const fixStart = (string) => {
+  const splittedString = string.split("");
+  const modifiedString = splittedString.flatMap((currentValue, index) => {
+    return currentValue === splittedString[0] && index > 0 ? "*" : currentValue;
+  });
+
+  return modifiedString.join("");
+};
+
+console.log(fixStart("amhsddddaaaahd"));
