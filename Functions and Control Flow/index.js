@@ -91,5 +91,14 @@ const pluralise = (num, noun) => {
   return `${num}, ${noun}s`;
 };
 
-console.log(pluralise(3, "cat"));
-console.log(pluralise(6, "dog"));
+// console.log(pluralise(3, "cat"));
+// console.log(pluralise(6, "dog"));
+
+const mixUp = (str1, str2) => {
+  const mixedStr1 = str2[0] + str2[1] + str1.slice(2, str1.length);
+  const mixedStr2 = str1[0] + str1[1] + str2.slice(2, str1.length);
+
+  return mixedStr1 + ", " + mixedStr2;
+};
+
+console.log(mixUp("cake", "dog"));
