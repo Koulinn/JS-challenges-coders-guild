@@ -101,4 +101,39 @@ const mixUp = (str1, str2) => {
   return mixedStr1 + ", " + mixedStr2;
 };
 
-console.log(mixUp("cake", "dog"));
+// console.log(mixUp("cake", "dog"));
+
+const bookList = [
+  {
+    title: "title1",
+    author: "author1",
+    alreadyRead: true,
+  },
+  {
+    title: "title2",
+    author: "author2",
+    alreadyRead: true,
+  },
+  {
+    title: "title3",
+    author: "author3",
+    alreadyRead: false,
+  },
+  {
+    title: "title4",
+    author: "author4",
+    alreadyRead: true,
+  },
+];
+
+const checkReadBooks = (list) => {
+  list.forEach((book) => {
+    if (book.alreadyRead) {
+      console.log(`Book ${book.title} from ${book.author} already read.`);
+    } else {
+      console.log(`Book ${book.title} from ${book.author} not read.`);
+    }
+  });
+};
+
+checkReadBooks(bookList);
