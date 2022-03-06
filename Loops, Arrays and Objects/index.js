@@ -8,7 +8,7 @@ const checkEvenOdd = () => {
   }
 };
 
-checkEvenOdd();
+// checkEvenOdd();
 
 const bookList = [
   {
@@ -44,3 +44,38 @@ const checkReadBooks = (list) => {
 };
 
 // checkReadBooks(bookList);
+
+const recipe = {
+  recipeTitle: "Chocolate cake",
+  servings: 8,
+  ingredients: ["plain flour", "eggs", "cocoa powder", "oil"],
+  directions: "Mix everything and hope for the best",
+  letsCook: function () {
+    console.log(`Let's cook ${this.recipeTitle}`);
+  },
+};
+
+recipe.letsCook();
+
+const topChoices = [
+  "Chocolate Cake",
+  "pizza",
+  "prawns",
+  "carbonara pasta",
+  "muffins",
+  "bread",
+];
+
+const phrase = (suff) => `My ${suff} choice`;
+
+topChoices.forEach((choice, i) => {
+  if (i === 0) {
+    console.log(phrase(i + 1 + "st"));
+  } else if (i === 1) {
+    console.log(phrase(i + 1 + "nd"));
+  } else if (i === 2) {
+    console.log(phrase(i + 1 + "rd "));
+  } else {
+    console.log(phrase(i + 1 + "th "));
+  }
+});
