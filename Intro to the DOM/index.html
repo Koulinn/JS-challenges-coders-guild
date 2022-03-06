@@ -22,4 +22,31 @@
       </li>
     </ul>
   </body>
+  <script>
+    const getSelector = (selector) => document.querySelectorAll(selector);
+    getSelector("body")[0].style["font-family"] = "Arial, sans-serif";
+    getSelector("span").forEach((span, i) => {
+      if (i === 0) {
+        span.innerHTML = "Rafa";
+      } else if (i === 1) {
+        span.innerHTML = "Solving problems";
+      } else if (i === 2) {
+        span.innerHTML = "Floripa";
+      }
+    });
+
+    const imgElement = getSelector("body")[0].appendChild(
+      document.createElement("img")
+    );
+
+    getSelector("li").forEach((li) => li.classList.add("listitem"));
+
+    imgElement.src =
+      "https://res.cloudinary.com/koulin/image/upload/v1629396592/Portfolio/bir1sjjq21r3uy0lejwv.jpg";
+  </script>
+  <style>
+    .listitem {
+      color: red;
+    }
+  </style>
 </html>
