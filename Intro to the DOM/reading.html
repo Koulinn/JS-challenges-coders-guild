@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>My book List</h1>
+    <ul></ul>
+  </body>
+  <script>
+    const bookList = [
+      {
+        title: "The Northern Lights",
+        author: "Philip Pullman",
+        alreadyRead: true,
+        img: "https://blackwells.co.uk/jacket/l/9781407130224.jpg",
+      },
+      {
+        title: "The Subtle knife",
+        author: "Philip Pullman",
+        alreadyRead: true,
+        img: "https://cdn2.penguin.com.au/covers/original/9781448196920.jpg",
+      },
+      {
+        title: "Wizard's First Rule",
+        author: "Terry Goodkind",
+        alreadyRead: true,
+        img: "https://prodimage.images-bn.com/lf?set=key%5Bresolve.pixelRatio%5D,value%5B1%5D&set=key%5Bresolve.width%5D,value%5B550%5D&set=key%5Bresolve.height%5D,value%5B10000%5D&set=key%5Bresolve.imageFit%5D,value%5Bcontainerwidth%5D&set=key%5Bresolve.allowImageUpscaling%5D,value%5B0%5D&product=path%5B/pimages/9780765322753_p0_v3%5D&call=url%5Bfile:common/decodeProduct.chain%5D",
+      },
+    ];
+
+    const list = document.querySelector("ul");
+    bookList.forEach((book) => {
+      list.insertAdjacentHTML(
+        "afterbegin",
+        `<li>
+        <p>Title: ${book.title}</p>
+        <p>Title: ${book.author}</p>
+        <img src=${book.img} class=${book.alreadyRead ? "read" : ""} style/>
+        </li>`
+      );
+    });
+
+    const counterTags = (tag) => {
+      console.log(
+        "There are " +
+          document.querySelectorAll(tag).length +
+          " " +
+          tag +
+          " on the page"
+      );
+    };
+
+    window.onload = () => {
+      counterTags("li");
+    };
+  </script>
+  <style>
+    img {
+      width: 300px;
+      object-fit: cover;
+    }
+    .read {
+      border: 5px solid violet;
+    }
+  </style>
+</html>
